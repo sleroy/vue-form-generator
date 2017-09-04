@@ -29,6 +29,7 @@
 		:readonly="schema.readonly",
 		:required="schema.required",
 		:size="schema.size",
+		:class="schema.style",
 		:src="schema.src",
 		:step="schema.step",
 		:width="schema.width",

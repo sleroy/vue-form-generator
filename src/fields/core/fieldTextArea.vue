@@ -8,7 +8,8 @@
 		:placeholder="schema.placeholder",
 		:readonly="schema.readonly",
 		:rows="schema.rows || 2",
-		:name="schema.inputName")
+		:name="schema.inputName", 
+		:class="schema.style")
 </template>
 
 <script>

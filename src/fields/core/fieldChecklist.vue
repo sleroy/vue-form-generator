@@ -6,7 +6,7 @@
 					input(type="checkbox", :checked="isItemChecked(item)", :disabled="disabled", @change="onChanged($event, item)")
 					| {{ getItemName(item) }}
 
-		.combobox.form-control(v-if="!schema.listBox", :disabled="disabled")
+		.combobox.form-control(v-if="!schema.listBox", :disabled="disabled", :class="schema.style")
 			.mainRow(@click="onExpandCombo", :class="{ expanded: comboExpanded }")
 				.info {{ selectedCount }} selected
 				.arrow

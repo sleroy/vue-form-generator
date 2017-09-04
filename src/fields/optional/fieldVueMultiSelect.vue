@@ -32,6 +32,7 @@
 		:disabled="disabled",
 		:max-height="selectOptions.maxHeight",
 		:show-pointer="selectOptions.showPointer",
+		:class="schema.style",
 		@input="updateSelected",
 		@select="onSelect",
 		@remove="onRemove",
