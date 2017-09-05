@@ -73,7 +73,7 @@
 
 					// Call event in schema
 					if (isFunction(this.schema.onPlaceChanged))
-						this.schema.onPlaceChanged(this.value, data, place, this.model, this.schema);
+						this.schema.onPlaceChanged(this, /**place*/ data, /**rawplace*/ place);
 				}
 			},
 
