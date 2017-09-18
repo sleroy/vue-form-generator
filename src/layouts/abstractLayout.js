@@ -282,13 +282,26 @@ export default {
 
     fieldErrors(field) {
       let res = this.errors.filter(e => e.field == field);
-      return res.map(item => item.error);
+      const result = res.map(item => item.error);
+      //console.log("Result from errors is ", result);
+      return result;
     },
 
     getFieldID(schema) {
       const idPrefix = this.options && this.options.fieldIdPrefix ? this.options.fieldIdPrefix : "";
       return slugifyFormID(schema, idPrefix);
+    },
+
+    getLabelID(schema) {
+      const idPrefix = this.options && this.options.fieldIdPrefix ? this.options.fieldIdPrefix : "";
+      return 'label-'  + slugifyFormID(schema, idPrefix);
+    },
+
+    getHintID(schema) {
+      const idPrefix = this.options && this.options.fieldIdPrefix ? this.options.fieldIdPrefix : "";
+      return 'hint-'  + slugifyFormID(schema, idPrefix);
     }
+
   }
 
 
