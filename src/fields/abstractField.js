@@ -170,7 +170,7 @@ export default {
 		},
 		getLabelID(schema) {
 			const idPrefix = this.formOptions && this.formOptions.fieldIdPrefix ? this.formOptions.fieldIdPrefix : "";
-			return slugifyFormID(schema, idPrefix);
+			return 'label-' + slugifyFormID(schema, idPrefix);
     },
 
     getHintID(schema) {
