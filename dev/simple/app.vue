@@ -1,11 +1,8 @@
 <template>
 <div>
   <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <data-table :rows="rows" :selected="selected" :select="selectRow"></data-table>
-    </div>
   </div>
-  <div v-show="model" class="row">
+  <div class="row">
     <div class="col-md-5 col-md-offset-1">
       <div class="control-buttons text-center">
         <button @click="newModel" class="btn btn-default new"> <i class="fa fa-plus"></i>New</button>

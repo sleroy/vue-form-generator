@@ -1,5 +1,5 @@
 <template>
-	<div class="slider" :disabled="disabled" :class="{ 'contain-pips': containPips, 'contain-tooltip': containTooltip }"  :class="schema.style"></div>  
+	<div class="slider" :disabled="disabled" :class="{ 'contain-pips': containPips, 'contain-tooltip': containTooltip }"  ></div>  
 </template>
 
 <script>

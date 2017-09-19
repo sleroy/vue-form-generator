@@ -167,16 +167,7 @@ export default {
 		getFieldID(schema) {
 			const idPrefix = this.formOptions && this.formOptions.fieldIdPrefix ? this.formOptions.fieldIdPrefix : "";
 			return slugifyFormID(schema, idPrefix);
-		},
-		getLabelID(schema) {
-			const idPrefix = this.formOptions && this.formOptions.fieldIdPrefix ? this.formOptions.fieldIdPrefix : "";
-			return 'label-' + slugifyFormID(schema, idPrefix);
-    },
-
-    getHintID(schema) {
-			const idPrefix = this.formOptions && this.formOptions.fieldIdPrefix ? this.formOptions.fieldIdPrefix : "";
-      return 'hint-'  + slugifyFormID(schema, idPrefix);
-    }
+		}
 
 	}
 };

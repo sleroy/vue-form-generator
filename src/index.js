@@ -7,7 +7,7 @@ module.exports = {
 	abstractField: require("./fields/abstractField").default,
 
 	install(Vue) {
-		Vue.component("form-generator", module.exports.component);
-		Vue.component("form-bootstrap3", module.exports.bootstrap3);
-	}
+	Vue.component("vue-form-generator", module.exports.component);
+	Vue.component("form-bootstrap3", module.exports.bootstrap3);
+}
 };

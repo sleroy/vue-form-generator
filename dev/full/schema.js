@@ -5,14 +5,14 @@ import {
 } from "../../src";
 
 let customAsyncValidator = function(value) {
-return new Promise((resolve, reject) => {
-	setTimeout(() => {
-	if (value)
-	resolve();
-	else
-                resolve(["Invalid value from async validator"]);
-}, 1000);
-});
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			if (value)
+				resolve();
+			else
+				resolve(["Invalid value from async validator"]);
+		}, 1000);
+	});
 };
 
 module.exports = {
@@ -47,24 +47,24 @@ module.exports = {
 		styleClasses: "half-width",
 		validator: validators.string,
 		onChanged(model, newVal, oldVal, field) {
-	console.log(`Model's name changed from ${oldVal} to ${newVal}. Model:`, model);
-},
+			console.log(`Model's name changed from ${oldVal} to ${newVal}. Model:`, model);
+		},
 		onValidated(model, errors, field) {
-	if (errors.length > 0)
-	console.warn("Validation error in Name field! Errors:", errors);
-}
+			if (errors.length > 0)
+			console.warn("Validation error in Name field! Errors:", errors);
+		}
 	}, {
-	type: "input",
-	inputType: "text",
-	label: "Last name",
-	model: "lastName",
-	featured: true,
-	required: true,
-	placeholder: "User's last name",
-	styleClasses: "half-width",
-	style: "input-lg",
-	validator: validators.string
-}, {
+		type: "input",
+		inputType: "text",
+		label: "Last name",
+		model: "lastName",
+		featured: true,
+		required: true,
+		placeholder: "User's last name",
+		styleClasses: "half-width",
+		style: "input-lg",
+		validator: validators.string
+	}, {
 	type: "input",
 	inputType: "url",
 	label: "URL",
