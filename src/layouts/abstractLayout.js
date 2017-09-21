@@ -8,6 +8,7 @@ import {fieldComponents} from '../fields';
 
 export default {
   components: fieldComponents,
+  name: 'form-field-input',
   props: {
     schema: Object,
     model: Object,
